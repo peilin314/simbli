@@ -1,8 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway';
+
+}
+
+header {
+
+    color: rgb(61, 61, 61);
+
+}
+
+
 .placeholder {
     color: red;
-    
+    font-family: 'Raleway';
+
 }
 
 .anotherClass {
     color: blue;
+    font-family: 'Raleway';
+
 }

@@ -1,27 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-*{
+*, *::before, *::after{
     margin: 0;
     padding: 0;
     font-family: 'Raleway';
-
+    box-sizing: border-box;
 }
 
 header {
-
     color: rgb(61, 61, 61);
+}
+
+.menu-bar{
+    font-size: 36px;
+    text-align: center;
 
 }
 
 
-.placeholder {
-    color: red;
-    font-family: 'Raleway';
+.btn {
+
+    transition: 0.1s;
 
 }
 
-.anotherClass {
-    color: blue;
-    font-family: 'Raleway';
+#signin-button{
+    font-size: 36px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
 
+#register-button{
+    font-size: 36px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: #62bbf0;
 }

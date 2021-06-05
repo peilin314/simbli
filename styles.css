@@ -1,7 +1,8 @@
 .placeholder {
-    background-color: red;
+    color: red;
+    
 }
 
 .anotherClass {
-    background-color: green;
+    color: blue;
 }

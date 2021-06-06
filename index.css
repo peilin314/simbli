@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway';
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+
+}
+
+.header {
+    color: red;
+    height: 200px;
+    font-size: 36px;
+}
+
+.simbli-icon {
+    position: fixed;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    left: 60px;
+    top: 24px;
+    background: linear-gradient(136.16deg, #E368A5 14.72%, #EA8977 37.56%, #7FCAF1 67.52%, #6FEEC0 86.62%);
+}
+
+.signin-register-btn {
+    position: fixed;
+    top: 33px;
+    right: 20%;
+    font-size: 36px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #7e7e7e;
+    transition: .3s;
+}
+
+.signin-register-btn:hover {
+    color: #62bbf0;
+}
+
+.container-hamburger-icon {
+    position: fixed;
+    top: 35px;
+    right: 10%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    font-size: 36px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 35px;
+    height: 5px;
+    background-color: #7e7e7e;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.divider {
+    position: absolute;
+    top: 122px;
+    height: 3px;
+    width: 100%;
+    background-color: #7e7e7e;
+}

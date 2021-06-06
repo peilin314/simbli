@@ -16,7 +16,7 @@
 }
 
 .simbli-icon {
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -26,9 +26,9 @@
 }
 
 .signin-register-btn {
-    position: absolute;
+    position: fixed;
     top: 33px;
-    right: 194px;
+    right: 20%;
     font-size: 36px;
     border: none;
     background: none;
@@ -42,9 +42,9 @@
 }
 
 .container-hamburger-icon {
-    position: absolute;
+    position: fixed;
     top: 35px;
-    right: 93px;
+    right: 10%;
     display: inline-block;
     cursor: pointer;
 }

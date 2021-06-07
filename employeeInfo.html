@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account</title>
+    <script type="text/javascript">
+        function saveInfo() {
+            let firstN = document.getElementById("firstName").value;
+            let lastN = document.getElementById("lastName").value;
+            let email = document.getElementById("email").value;
+            let pw = document.getElementById("password").value;
+            let confirmPw = document.getElementById("confirmPw").value;
+            let phone = document.getElementById("phone").value;
+            if(pw != confirmPw) {
+                alert("Passwords do not match!");
+                return;
+            }
+            let toPrint = `Name: ${firstN} ${lastN}
+            Email: ${email}
+            Phone number: ${phone}`;
+            document.write(toPrint);
+        }
+    </script>
+</head>
+<body>
+    <input id="firstName" placeholder="First name">
+    <input id="lastName" placeholder="Last name">
+    <br><br>
+    <input id="email" placeholder="Email">
+    <br><br>
+    <input type="password" id="password" placeholder="Password">
+    <input type="password" id="confirmPw" placeholder="Confirm">
+    <br>
+    <input id="phone" placeholder="Phone number">
+    <button onclick="saveInfo()" id="saveBtn">Save</button>
+</body>
+</html>

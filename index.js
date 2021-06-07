@@ -15,9 +15,10 @@ function Corporation(name) {
   let stores = [];
   // info
 }
-
+// var name = window.prompt("What is your name?");
 const corp = new Corporation('Starbucks');
 console.log(corp.name);
+
 
 // Store parameter can be empty or by name/number?
 function Store() {

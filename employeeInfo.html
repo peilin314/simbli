@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Account</title>
+    <title>Simbli</title>
+    <h1>Welcome to Simbli</h1>
     <script type="text/javascript">
         function saveInfo() {
             let firstN = document.getElementById("firstName").value;
@@ -13,7 +15,7 @@
             let pw = document.getElementById("password").value;
             let confirmPw = document.getElementById("confirmPw").value;
             let phone = document.getElementById("phone").value;
-            if(pw != confirmPw) {
+            if (pw != confirmPw) {
                 alert("Passwords do not match!");
                 return;
             }
@@ -24,16 +26,42 @@
         }
     </script>
 </head>
+
 <body>
-    <input id="firstName" placeholder="First name">
-    <input id="lastName" placeholder="Last name">
-    <br><br>
-    <input id="email" placeholder="Email">
-    <br><br>
-    <input type="password" id="password" placeholder="Password">
-    <input type="password" id="confirmPw" placeholder="Confirm">
-    <br>
-    <input id="phone" placeholder="Phone number">
-    <button onclick="saveInfo()" id="saveBtn">Save</button>
+    <form action="/" method="GET">
+        <div>
+            <label for="firstName">First Name</label>
+            <input id="firstName" name="firstName" type="text">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" name="lastName" type="text">
+        </div>
+        <br>
+        <div>
+            <label for="gender">Preferred Gender</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="na">Prefer Not to Answer</option>
+            </select>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email">
+        </div>
+        <br>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <br>
+            <input type="password" id="confirmPw" name="password" placeholder="Confirm Password">
+        </div>
+        <br>
+        <div>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </div>
+        <button onclick="saveInfo()" id="saveBtn">SAVE</button>
+    </form>
 </body>
+
 </html>

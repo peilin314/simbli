@@ -5,7 +5,7 @@ function Corporation(name) {
   // probably use this for let variables 
   Object.defineProperty(this, 'name', {
     get: function() {
-      return this.name;
+      return name;
     },
     set: function(value) {
       this.name = value;

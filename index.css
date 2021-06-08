@@ -1,19 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     font-family: 'Raleway';
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-
 }
 
-.header {
-    color: red;
-    height: 200px;
-    font-size: 36px;
-}
 
 .simbli-icon {
     position: fixed;
@@ -23,6 +16,25 @@
     left: 60px;
     top: 24px;
     background: linear-gradient(136.16deg, #E368A5 14.72%, #EA8977 37.56%, #7FCAF1 67.52%, #6FEEC0 86.62%);
+}
+
+.simbli-icon-letter {
+    position: fixed;
+    width: 46px;
+    height: 100px;
+    left: 97px;
+    top: 34px;
+    font-family: Lobster;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 100px;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    color: white
+
+
 }
 
 .signin-register-btn {
@@ -56,14 +68,26 @@
     cursor: pointer;
     width: 35px;
     height: 5px;
-    background-color: #7e7e7e;
+    border-radius: 25px;
     margin: 6px 0;
     transition: 0.4s;
 }
 
+.bar1 {
+    background-color: #f870f9;
+}
+
+.bar2 {
+    background-color: #ad97f4;
+}
+
+.bar3 {
+    background-color: #62bbf0;
+}
+
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-9px, 7px);
+    transform: rotate(-45deg) translate(-9px, 7px);
 }
 
 .change .bar2 {
@@ -77,8 +101,25 @@
 
 .divider {
     position: absolute;
-    top: 122px;
-    height: 3px;
-    width: 100%;
-    background-color: #7e7e7e;
+    height: 120px;
+    width: 100vw;
+    background-color: white;
+    border-bottom: 3px solid #7e7e7e;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
 }

@@ -4,16 +4,18 @@
     padding: 0;
     font-family: 'Raleway';
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
+    
 
 }
 
-.header {
-    color: red;
-    height: 200px;
-    font-size: 36px;
+.header{
+    background-color: grey;
+    color: darkred;
 }
+
+
+
+
 
 .simbli-icon {
     position: fixed;
@@ -40,6 +42,7 @@
 .signin-register-btn:hover {
     color: #62bbf0;
 }
+
 
 .container-hamburger-icon {
     position: fixed;
@@ -77,8 +80,30 @@
 
 .divider {
     position: absolute;
-    top: 122px;
-    height: 3px;
-    width: 100%;
-    background-color: #7e7e7e;
+    height: 120px;
+    width: 100vw;
+    background-color: white;
+    border-bottom: 3px solid #7e7e7e;
+}
+
+
+.container{
+
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+
+
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
 }

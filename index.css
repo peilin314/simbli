@@ -59,9 +59,21 @@
     cursor: pointer;
     width: 35px;
     height: 5px;
-    background-color: #7e7e7e;
+    border-radius: 25px;
     margin: 6px 0;
     transition: 0.4s;
+}
+.bar1 {
+    background-color: #f870f9;
+
+}
+.bar2 {
+    background-color: #ad97f4;
+
+}
+.bar3 {
+    background-color: #62bbf0;
+
 }
 
 .change .bar1 {

@@ -8,6 +8,7 @@
     <title>Simbli</title>
     <h1>Welcome to Simbli</h1>
     <script type="text/javascript">
+
         function saveInfo() {
             let firstN = document.getElementById("firstName").value;
             let lastN = document.getElementById("lastName").value;
@@ -24,6 +25,7 @@
             Phone number: ${phone}`;
             document.write(toPrint);
         }
+
     </script>
 </head>
 
@@ -31,9 +33,9 @@
     <form action="/" method="GET">
         <div>
             <label for="firstName">First Name</label>
-            <input id="firstName" name="firstName" type="text">
+            <input id="firstName" name="firstName" type="text" value="Bob" required>
             <label for="lastName">Last Name</label>
-            <input id="lastName" name="lastName" type="text">
+            <input id="lastName" name="lastName" type="text" value="Ross" required>
         </div>
         <br>
         <div>
@@ -46,22 +48,48 @@
         </div>
         <div>
             <label for="email">Email</label>
-            <input id="email" name="email" type="email">
+            <input id="email" name="email" type="email" value="bobRoss@gmail.com" required>
         </div>
         <br>
         <div>
             <label for="password">Password</label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" value="123" required>
             <br>
-            <input type="password" id="confirmPw" name="password" placeholder="Confirm Password">
+            <label for="confirmPw">Confirm Password</label>
+            <input type="password" id="confirmPw" name="password" placeholder="Confirm Password" value="123" required>
         </div>
         <br>
         <div>
             <label for="phone">Phone</label>
             <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
         </div>
-        <button onclick="saveInfo()" id="saveBtn">SAVE</button>
+        <button type="button" onclick="saveInfo()" id="saveBtn">SAVE</button>
     </form>
+
+    <!-- This portion incorporates a web server -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.6/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.6/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDBzPHvh4YdDOleudPhEaDLW2dE7Y9Z0lc",
+            authDomain: "simbli.firebaseapp.com",
+            projectId: "simbli",
+            storageBucket: "simbli.appspot.com",
+            messagingSenderId: "689205206758",
+            appId: "1:689205206758:web:0310288d25bd6cf6a6e527",
+            measurementId: "G-EG5GTFN9TX"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
 </body>
 
 </html>

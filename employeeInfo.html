@@ -9,7 +9,7 @@
     <h1>Welcome to Simbli</h1>
     <script type="text/javascript">
 
-        function saveInfo() {
+      /*  function saveInfo() {
             let firstN = document.getElementById("firstName").value;
             let lastN = document.getElementById("lastName").value;
             let email = document.getElementById("email").value;
@@ -18,13 +18,13 @@
             let phone = document.getElementById("phone").value;
             if (pw != confirmPw) {
                 alert("Passwords do not match!");
-                return;
+                return false;
             }
             let toPrint = `Name: ${firstN} ${lastN}
             Email: ${email}
             Phone number: ${phone}`;
             document.write(toPrint);
-        }
+        } */
 
     </script>
 </head>
@@ -48,48 +48,54 @@
         </div>
         <div>
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" value="bobRoss@gmail.com" required>
+            <input id="email" name="email" type="email" value="bobRoss@gmail.com" required><br>
         </div>
-        <br>
         <div>
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" value="123" required>
-            <br>
+            <input type="password" id="password" name="password" value="123" required><br>
             <label for="confirmPw">Confirm Password</label>
-            <input type="password" id="confirmPw" name="password" placeholder="Confirm Password" value="123" required>
+            <input type="password" id="confirmPw" name="password" placeholder="Confirm Password" value="123" required><br>
         </div>
-        <br>
         <div>
             <label for="phone">Phone</label>
             <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
         </div>
-        <button type="button" onclick="saveInfo()" id="saveBtn">SAVE</button>
+       <!-- <button type="button" onclick="saveInfo()" id="saveBtn">SAVE</button> --> 
+        <button id="saveBtn">SAVE</button>
     </form>
 
-    <!-- This portion incorporates a web server -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.6/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+<!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.6/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
 
-    <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        var firebaseConfig = {
-            apiKey: "AIzaSyDBzPHvh4YdDOleudPhEaDLW2dE7Y9Z0lc",
-            authDomain: "simbli.firebaseapp.com",
-            projectId: "simbli",
-            storageBucket: "simbli.appspot.com",
-            messagingSenderId: "689205206758",
-            appId: "1:689205206758:web:0310288d25bd6cf6a6e527",
-            measurementId: "G-EG5GTFN9TX"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-    </script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDBzPHvh4YdDOleudPhEaDLW2dE7Y9Z0lc",
+    authDomain: "simbli.firebaseapp.com",
+    databaseURL: "https://simbli-default-rtdb.firebaseio.com",
+    projectId: "simbli",
+    storageBucket: "simbli.appspot.com",
+    messagingSenderId: "689205206758",
+    appId: "1:689205206758:web:0310288d25bd6cf6a6e527",
+    measurementId: "G-EG5GTFN9TX"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+    <!-- This portion incorporates a web server 
+
+      /*  var first = document.getElementById('firstName');
+        var firstRef = firebase.database().ref().child('text');
+        firstRef.on('value', snap => first.innerText = snap.val()); */
+        firebase.analytics(); -->
+    <script src="./saveInfo.js"></script>
 </body>
 
 </html>

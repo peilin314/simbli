@@ -13,9 +13,13 @@ const saveBtn = document.getElementById('saveBtn');
 // document.write(toPrint);
 
 const database = firebase.database();
+// for readability, can change the ref line (find code at 9:33)
+// const rootRef = database.ref('name');
 
 saveBtn.addEventListener('click', (e) => {
 	e.preventDefault();
+	// probably want to create a userId for each person 
+	// so they can be saved through an id instead of a name?! 
 	database.ref('/name/' + firstN.value + lastN.value).set({
 		gender: gender.value,
 		email: email.value,
@@ -23,3 +27,5 @@ saveBtn.addEventListener('click', (e) => {
 		phone: phone.value
 	});
 });
+
+// future update button code is at 13:39

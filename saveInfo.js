@@ -9,6 +9,7 @@ if (pw.value != confirmPw.value) {
 	// return -1;
 }
 let phone = document.getElementById("phone");
+
 const saveBtn = document.getElementById('saveBtn');
 // document.write(toPrint);
 

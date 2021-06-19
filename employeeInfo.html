@@ -7,26 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simbli</title>
     <h1>Welcome to Simbli</h1>
-    <script type="text/javascript">
-
-      /*  function saveInfo() {
-            let firstN = document.getElementById("firstName").value;
-            let lastN = document.getElementById("lastName").value;
-            let email = document.getElementById("email").value;
-            let pw = document.getElementById("password").value;
-            let confirmPw = document.getElementById("confirmPw").value;
-            let phone = document.getElementById("phone").value;
-            if (pw != confirmPw) {
-                alert("Passwords do not match!");
-                return false;
-            }
-            let toPrint = `Name: ${firstN} ${lastN}
-            Email: ${email}
-            Phone number: ${phone}`;
-            document.write(toPrint);
-        } */
-
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -60,11 +41,46 @@
             <label for="phone">Phone</label>
             <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
         </div>
+        <div class="calendar-container">
+            <div class="header">
+                <ul class="weekdays">
+                    <li>Sunday</li>
+                    <li>Monday</li>
+                    <li>Tuesday</li>
+                    <li>Wednesday</li>
+                    <li>Thursday</li>
+                    <li>Friday</li>
+                    <li>Saturday</li>
+                </ul> 
+
+            </div>
+
+            <div class="timeslots-container">
+                <ul class="timeslots">
+                    <div id="oHours"></div>
+                    <script>
+                        let openingHours = "", i;
+                        let hr = 10;
+                        let ampm = "AM";
+                        for(let i = 0; i < 13; i++) {
+                            if(hr > 12) {
+                                hr = 1;
+                                ampm = "PM";
+                            }
+                            openingHours = openingHours + "<li>" + hr + ampm + "</li><br>";
+                            hr++;
+                        }
+                        document.getElementById("oHours").innerHTML = openingHours;
+                    </script>
+                </ul>
+            </div>
+
+        </div>
+
        <!-- <button type="button" onclick="saveInfo()" id="saveBtn">SAVE</button> --> 
         <button id="saveBtn">SAVE</button>
     </form>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
 
